@@ -1,0 +1,17 @@
+group 'parfait-examples'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.7
+
+mainClassName = "Main"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.custardsource.parfait:parfait-core:0.3.7'
+}
