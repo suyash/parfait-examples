@@ -6,7 +6,7 @@ apply plugin: 'application'
 
 sourceCompatibility = 1.7
 
-mainClassName = "Main"
+mainClassName = "com.parfait.counter.Main"
 
 repositories {
     mavenCentral()

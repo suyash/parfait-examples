@@ -1,22 +1,24 @@
+package com.parfait.counter;
+
 import com.custardsource.parfait.MonitoredCounter;
 
-public class Test implements Runnable {
+public class Counter implements Runnable {
     private MonitoredCounter counter;
     private int time = 1000;
 
-    Test () {
+    Counter () {
         counter = new MonitoredCounter("test.counter", "A simple Counter");
     }
 
     public void run () {
-        while (true) {
-            try {
+        try {
+            while (true) {
                 counter.inc();
                 System.out.println("Counter set to: " + counter.get());
                 Thread.sleep(time);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
             }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 }
