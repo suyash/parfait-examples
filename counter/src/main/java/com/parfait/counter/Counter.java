@@ -1,6 +1,6 @@
 package com.parfait.counter;
 
-import com.custardsource.parfait.MonitoredCounter;
+import io.pcp.parfait.MonitoredCounter;
 
 public class Counter implements Runnable {
     private MonitoredCounter counter;

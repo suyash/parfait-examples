@@ -13,11 +13,15 @@ repositories {
 }
 
 dependencies {
-    compile 'com.custardsource.parfait:parfait-core:0.3.7'
-    compile 'com.custardsource.parfait:dxm:0.3.7'
+//    compile 'com.custardsource.parfait:parfait-core:0.3.7'
+//    compile 'com.custardsource.parfait:dxm:0.3.7'
     compile 'org.springframework:spring-core:4.2.5.RELEASE'
     compile 'org.springframework:spring-beans:4.2.5.RELEASE'
     compile 'org.springframework:spring-context:4.2.5.RELEASE'
     compile 'log4j:log4j:1.2.17'
-    // compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'org.slf4j:slf4j-simple:1.7.21'
+    compile 'com.google.guava:guava:19.0'
+
+    // created to get the latest core and dxm
+    compile fileTree(dir: 'libs', include: ['*.jar'])
 }

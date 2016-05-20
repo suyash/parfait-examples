@@ -3,8 +3,8 @@ package com.parfait.counter;
 import java.lang.management.ManagementFactory;
 import java.util.Collections;
 
-import com.custardsource.parfait.dxm.HashingIdentifierSource;
-import com.custardsource.parfait.dxm.IdentifierSource;
+import io.pcp.parfait.dxm.HashingIdentifierSource;
+import io.pcp.parfait.dxm.IdentifierSource;
 
 import org.apache.log4j.Logger;
 
