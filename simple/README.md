@@ -1,6 +1,6 @@
-## counter
+## simple
 
-the simplest example, simply creates a counter that increases its value each second
+an sample implementation
 
 to run
 
