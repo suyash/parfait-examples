@@ -1,0 +1,19 @@
+group 'parfait-examples'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.7
+mainClassName = 'Main'
+
+repositories {
+    mavenCentral()
+}
+
+// http://stackoverflow.com/a/23897638/3673043
+dependencies {
+//    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.custardsource.parfait:parfait-core:0.3.7'
+    compile 'com.custardsource.parfait:dxm:0.3.7'
+}
