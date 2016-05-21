@@ -17,15 +17,8 @@ public class Simple implements Runnable {
         writer.addMetric(instance, Semantics.INSTANT, Unit.ONE, 0);
         writer.addMetric(discrete, Semantics.DISCRETE, Unit.ONE, 0);
 
-        int val = 0;
+        writer.updateMetric(counter, 41);
 
-        try {
-            while (true) {
-                val += 1;
-                writer.updateMetric(counter, val);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        // writer.stop() ?
     }
 }
