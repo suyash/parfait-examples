@@ -1,5 +1,3 @@
-package com.parfait.counter;
-
 import io.pcp.parfait.MonitoredCounter;
 
 public class Counter implements Runnable {

@@ -39,7 +39,7 @@
         <property name="updateInterval" value="${parfait.interval}"/>
     </bean>
 
-    <bean name="optionalMBean" class="io.pcp.parfait.OptionalMonitoredMBeanRegistrar"
+    <bean name="optionalMBean" class="OptionalMonitoredMBeanRegistrar"
           abstract="true">
         <property name="monitorableRegistry" ref="monitorableRegistry"/>
         <property name="updateInterval" value="${parfait.interval}"/>

@@ -1,5 +1,3 @@
-package com.parfait.counter;
-
 import java.lang.management.ManagementFactory;
 import java.util.Collections;
 

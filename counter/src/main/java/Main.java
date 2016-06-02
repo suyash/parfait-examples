@@ -1,12 +1,10 @@
-package com.parfait.counter;
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import io.pcp.parfait.DynamicMonitoringView;
 
 public class Main {
-    private static void premain() throws Exception {
+    private static void premain () throws Exception {
         // String runtimeName = ManagementFactory.getRuntimeMXBean().getName();
         // logger.debug(String.format("Agent runtime: %s [%s]", runtimeName, arguments));
 
@@ -19,9 +17,15 @@ public class Main {
         // String name = System.getProperty(MonitoringViewProperties.PARFAIT_NAME);
         // logger.debug(String.format("Starting Parfait agent %s", name));
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("agent.xml");
-        DynamicMonitoringView view = (DynamicMonitoringView)context.getBean("monitoringView");
-        view.start();
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("agent.xml");
+        try {
+            DynamicMonitoringView view = (DynamicMonitoringView)context.getBean("monitoringView");
+            view.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            context.close();
+        }
     }
 
     public static void main (String args[]) {
