@@ -1,0 +1,22 @@
+group 'parfait-examples'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.7
+
+mainClassName = "Main"
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile 'io.pcp.parfait:dxm:0.3.8-SNAPSHOT'
+    compile 'io.pcp.parfait:parfait-core:0.3.8-SNAPSHOT'
+    compile 'io.pcp.parfait:parfait-pcp:0.3.8-SNAPSHOT'
+
+    compile 'log4j:log4j:1.2.17'
+}
